@@ -2,9 +2,11 @@
   "version": 2,
   "builds": [
     { "src": "index.html", "use": "@vercel/static" },
+    { "src": "page-admin.html", "use": "@vercel/static" },
     { "src": "assets/**", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/page-admin", "dest": "/page-admin.html" },
     { "src": "/(?!assets/.*)", "dest": "/index.html" }
   ]
 }
