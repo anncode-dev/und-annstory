@@ -11,8 +11,8 @@
     <meta property="og:description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://siti-angga-anncode.vercel.app/">
-    <meta property="og:image" content="https://siti-angga-anncode.vercel.app/images/gambar-og.jpg">
-    <meta property="og:image:secure_url" content="https://siti-angga-anncode.vercel.app/images/gambar-og.jpg">
+    <meta property="og:image" content="https://siti-angga-anncode.vercel.app/assets/images/gambar-og.jpg">
+    <meta property="og:image:secure_url" content="https://siti-angga-anncode.vercel.app/assets/images/gambar-og.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="750">
     <meta property="og:image:height" content="600">
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Siti & Angga | anncode.dev">
     <meta name="twitter:description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
-    <meta name="twitter:image" content="https://siti-angga-anncode.vercel.app/images/gambar-og.jpg">
+    <meta name="twitter:image" content="https://siti-angga-anncode.vercel.app/assets/images/gambar-og.jpg">
 
     <link rel="canonical" href="https://siti-angga-anncode.vercel.app/">
     <!-- AOS CSS -->
@@ -655,36 +655,6 @@
             return { namaTamu, openInvitation, days,hours,minutes,seconds, isAttending, guestCount, successMessage, setAttendance, increment, decrement, submitRSVP, name,message,ucapanList,submitUcapan, copied, copyAccount, openMap, addToCalendar };
         }
     }).mount('body');
-
-    document.addEventListener('DOMContentLoaded', () => {
-            loadMedia();
-            fetchGuestData();
-        });
-
-        function loadMedia() {
-            // Load video
-            invitationVideo.src = MEDIA_PATHS.video;
-            
-            // Load images
-            imageGallery.innerHTML = '';
-            MEDIA_PATHS.images.forEach(imagePath => {
-                const img = document.createElement('img');
-                img.src = imagePath;
-                img.alt = "Celebration memory";
-                img.classList.add('fade-in');
-                imageGallery.appendChild(img);
-            });
-            
-            // Set up video play button
-            playButton.addEventListener('click', () => {
-                invitationVideo.play();
-                playButton.style.display = 'none';
-            });
-            
-            invitationVideo.addEventListener('pause', () => {
-                playButton.style.display = 'flex';
-            });
-        }
     </script>
 
 </body>
