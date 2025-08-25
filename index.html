@@ -660,6 +660,31 @@
             loadMedia();
             fetchGuestData();
         });
+
+        function loadMedia() {
+            // Load video
+            invitationVideo.src = MEDIA_PATHS.video;
+            
+            // Load images
+            imageGallery.innerHTML = '';
+            MEDIA_PATHS.images.forEach(imagePath => {
+                const img = document.createElement('img');
+                img.src = imagePath;
+                img.alt = "Celebration memory";
+                img.classList.add('fade-in');
+                imageGallery.appendChild(img);
+            });
+            
+            // Set up video play button
+            playButton.addEventListener('click', () => {
+                invitationVideo.play();
+                playButton.style.display = 'none';
+            });
+            
+            invitationVideo.addEventListener('pause', () => {
+                playButton.style.display = 'flex';
+            });
+        }
     </script>
 
 </body>
