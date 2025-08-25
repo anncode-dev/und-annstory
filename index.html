@@ -54,8 +54,614 @@
     </style>
 </head>
 
-<body>
-    <img src="./assets/images/gambar-1.jpg" alt="Background">
+<body class="font-sans">
+
+    <section id="intro" class="text-white">
+        <video autoplay muted playsinline loop>
+            <source src="assets/video/pembukaan.mp4" type="video/mp4">
+        </video>
+        <div id="intro-content">
+            <p class="text-base font-[txt]">Kepada Yth.</p>
+            <p class="text-xl font-semibold mt-2 font-[txt]" id="nama-tamu">Tamu Undangan</p>
+            <button id="btn-open" class="bg-white/10 backdrop-blur-sm text-sm border border-white text-white px-6 py-3 mt-5 rounded-md transition-transform hover:scale-105 font-[txt]">
+                Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <section id="bagian-kedua" class="relative min-h-screen px-6 text-white overflow-hidden">
+        <video autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="video/bagian-satu.mp4" type="video/mp4" />
+        </video>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex items-center justify-center text-center">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/kedua.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+        <div class="relative z-10 max-w-2xl">
+        <p class="text-white  mb-6 text-2xl font-[txt] leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا 
+            لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ 
+            اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ 
+        </p>
+        <p class="text-base leading-relaxed font-[txt] px-3" data-aos="fade-up" data-aos-delay="200">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
+            untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan
+            Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu
+            benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+            <span class="block mt-2">(<i>Q.S. Ar-Rum: 21</i>)</span>
+        </p>
+        </div>
+    </section>
+
+    <section class="relative bg-black text-white text-center py-10">
+        <div>
+            <p class="font-[txt] text-4xl" data-aos="fade-up" data-aos-delay="100">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+            </div>
+            <div class="mt-6 px-10" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-sm mt-2 font-[txt]" >
+                Dengan memohonkan Rahmat dan Ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.
+            </p>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="./assets/video/bride-cewe.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute bottom-24 left-0 right-0 text-center z-10 max-w-2xl mx-auto px-4">
+        <p class="text-white text-6xl font-[hdr] leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            Siti Santia
+        </p>
+        <hr class="border-2 border-white mx-40 rounded-full my-6">
+        <p class="text-xl mt-2 leading-relaxed font-[txt] px-5" data-aos="fade-up" data-aos-delay="200">
+            Putri keempat dari <br> Bapak Koyan & Ibu Enung
+        </p>
+        </div>
+    </section>
+
+    <section class="relative bg-black text-white text-center">
+        <div class="px-10">
+        <p class="text-7xl font-semibold font-[txt]" >
+            &
+        </p>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/bride-cowo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+        <div class="absolute bottom-24 left-0 right-0 text-center z-10 max-w-2xl mx-auto px-4">
+        <p class="text-white text-5xl py-2 font-[hdr] leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            Angga Agnia
+        </p>
+        <hr class="border-2 border-white mx-40 rounded-full my-6">
+        <p class="text-xl mt-2 leading-relaxed font-[txt] px-5" data-aos="fade-up" data-aos-delay="200">
+            Putra pertama dari <br> Bapak Jojon/Joni & Ibu Nuraida
+        </p>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex flex-col items-center justify-center text-center">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/bagian-ketiga.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+        <div
+        ref="countdownRef"
+        class="countdown"
+        >
+        <div class="mb-10 mt-20">
+            <p class="text-4xl text-center font-[hdr] text-white" data-aos="zoom-in">Hari Yang Ditunggu</p>
+            <hr class="w-24 mx-auto my-4 border-t-2 border-white/30" data-aos="zoom-in" />
+        </div>
+        <div class="flex  justify-center space-x-6 px-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white py-5  font-semibold transition-transform hover:scale-105" data-aos="zoom-in">
+            <div class="text-center ">
+            <p class="text-6xl text-white font-bold">{{ days }}</p>
+            <p class="text-sm mt-2 text-white/80">Hari</p>
+            </div>
+            <div class="text-center">
+            <p class="text-6xl  text-white font-bold">{{ hours }}</p>
+            <p class="text-sm mt-2 text-white/80">Jam</p>
+            </div>
+            <div class="text-center">
+            <p class="text-6xl text-white font-bold">{{ minutes }}</p>
+            <p class="text-sm mt-2 text-white/80">Menit</p>
+            </div>
+            <div class="text-center">
+            <p class="text-6xl text-white font-bold">{{ seconds }}</p>
+            <p class="text-sm mt-2 text-white/80">Detik</p>
+            </div>
+        </div>
+            <div class="flex flex-col items-center mt-10">
+            <p class="text-2xl text-center font-[txt]  text-white/90" data-aos="zoom-in">Save The Date</p>
+            </div>  
+            <div class="text-center mt-10">
+            <button
+                @click="addToCalendar"
+                class="bg-white/10 backdrop-blur-sm border border-white font-[txt] text-white px-6 py-3 rounded-md font-semibold transition-transform hover:scale-105"
+                data-aos="fade-up"
+            >
+                Tambah Ke Kalender
+            </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden">
+        <video
+        ref="bgVideo"
+        autoplay
+        muted
+        playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+        <source src="video/bagian-keempat.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+
+        <div class="relative z-10 py-40 mt-20">
+        <div id="gallery">
+
+            <div class="preview">
+                <img id="activeImage" src="images/gambar-1.jpg" alt="Preview" draggable="false">
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/gambar-1.jpg" alt="Galeri"></div>
+                <div class="swiper-slide"><img src="images/gambar-2.jpg" alt="Galeri"></div>
+                <div class="swiper-slide"><img src="images/gambar-3.jpg" alt="Galeri"></div>
+                <div class="swiper-slide"><img src="images/gambar-4.jpg" alt="Galeri"></div>
+                <div class="swiper-slide"><img src="images/gambar-5.jpg" alt="Galeri"></div>
+                <div class="swiper-slide"><img src="images/gambar-6.jpg" alt="Galeri"></div>
+                <div class="swiper-slide"><img src="images/gambar-7.jpg" alt="Galeri"></div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex flex-col items-center justify-center text-center">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/bagian-kelima.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+        <div class="absolute bottom-[135px] left-0 right-0 text-center z-10 max-w-2xl mx-auto px-4" data-aos="zoom-in">
+        <div class="text-white text-lg font-[txt] leading-relaxed">
+            <p class="text-2xl mt-10">Sabtu, 30 Agustus 2025</p>
+            <p class="mt-5">Pukul 08.00 WIB s.d Selesai</p>
+            <p class="mt-5">Bertempat di <br> Kp. Ci Pangawaren RT 09/02 <br> Pasir Panjang, Ciracap</p>
+            <div class="text-center mt-10">
+            <button
+                @click="openMap"
+                class="bg-white/10 backdrop-blur-sm border border-white text-white px-6 py-3 rounded-md font-semibold transition-transform hover:scale-105"
+            >
+                Lihat Peta Lokasi
+            </button>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex flex-col items-center justify-center text-center">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/bagian-keenam.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+        <div class="absolute bottom-[220px] left-0 right-0 text-center z-10 max-w-2xl mx-auto px-4" data-aos="zoom-in">
+        <div class="text-white text-lg font-[txt] leading-relaxed">
+            <p class="text-2xl mt-10">Sabtu, 30 Agustus 2025</p>
+            <p class="mt-5">Pukul 11.00 WIB s.d Selesai</p>
+            <p class="mt-5">Bertempat di <br> Kp. Ci Pangawaren RT 09/02 <br> Pasir Panjang, Ciracap</p>
+            <div class="text-center mt-10">
+            <button
+                @click="openMap"
+                class="bg-white/10 backdrop-blur-sm border border-white text-white px-6 py-3 rounded-md font-semibold transition-transform hover:scale-105"
+            >
+                Lihat Peta Lokasi
+            </button>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex items-center justify-center text-center">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/bagian-ketujuh.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+
+        <div class="relative z-10 max-w-2xl">
+        <p class="text-white mb-6 text-4xl font-[hdr] leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            Konfirmasi Kehadiran
+        </p>
+        <p class="text-lg leading-relaxed font-[txt] px-2" data-aos="fade-up" data-aos-delay="200">
+            Harap Konfirmasi kehadiran Anda sebelum <br> 28 Agustus 2025
+        </p>
+
+        <div v-if="successMessage" class="mt-10 text-white font-semibold">
+            <p class="bg-white/20 font-[txt] backdrop-blur-sm border w-full border-white text-white px-6 py-3 rounded-full font-semibold transition-transform hover:scale-105">{{ successMessage }}</p>
+        </div>
+        <div v-else class="mt-10" data-aos="fade-up">
+            <p class="text-lg leading-relaxed font-[txt] px-2" data-aos="fade-up" data-aos-delay="200">
+            Apakah kamu akan hadir?
+            </p>
+
+            <div class="text-center mt-5 flex flex-col space-y-2">
+            <button
+                @click="setAttendance(true)"
+                data-aos="zoom-in"
+                :class="['bg-white/10 font-[txt] backdrop-blur-sm border w-full border-white text-white px-6 py-3 rounded-full font-semibold transition-transform hover:scale-105', isAttending === true ? 'bg-white/60' : '']"
+            >
+                Hadir
+            </button>
+            <button
+                @click="setAttendance(false)"
+                data-aos="zoom-in"
+                :class="['bg-white/10 font-[txt] backdrop-blur-sm border w-full border-white text-white px-6 py-3 rounded-full font-semibold transition-transform hover:scale-105', isAttending === false ? 'bg-white/30' : '']"
+            >
+                Tidak Hadir
+            </button>
+            </div>
+
+            <!-- Input jumlah tamu muncul hanya jika hadir -->
+            <div v-if="isAttending" class="mt-10">
+            <p class="text-lg leading-relaxed font-[txt] px-2" data-aos="fade-up" data-aos-delay="200">
+                Jumlah tamu yang akan hadir termasuk kamu?
+            </p>
+            <div class="flex items-center justify-center mt-5 space-x-4">
+                <button
+                @click="decrement"
+                class="bg-white/10 font-[txt] backdrop-blur-sm border border-white text-white px-6 py-3 rounded-md font-semibold transition-transform hover:scale-105"
+                >
+                -
+                </button>
+                <input
+                type="number"
+                class="bg-white/10 font-[txt] backdrop-blur-sm border w-40 text-center border-white text-white px-6 py-3 rounded-md font-semibold transition-transform hover:scale-105"
+                v-model.number="guestCount"
+                min="1"
+                />
+                <button
+                @click="increment"
+                class="bg-white/10 font-[txt] backdrop-blur-sm border border-white text-white px-6 py-3 rounded-md font-semibold transition-transform hover:scale-105"
+                >
+                +
+                </button>
+            </div>
+            </div>
+
+            <button
+            @click="submitRSVP"
+            data-aos="zoom-in"
+            class="mt-10 bg-white/10 font-[txt] backdrop-blur-sm border border-white text-white px-6 py-3 rounded-full font-semibold transition-transform hover:scale-105"
+            >
+            Konfirmasi Kehadiran
+            </button>
+        </div>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex items-center justify-center text-center">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/kedelapan.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+
+        <div class="relative z-10 max-w-2xl">
+        <p class="text-white mb-6 text-4xl font-[hdr] leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            Wedding Gift
+        </p>
+        <p class="text-base px-10 leading-relaxed font-[txt]" data-aos="fade-up" data-aos-delay="200">
+            Kehadiran Anda adalah hadiah terindah bagi kami. Namun jika Anda ingin memberikan hadiah, Anda dapat mengirimkannya melalui rekening berikut:
+        </p>
+
+        <div class="mt-10">
+            <div class="text-center mt-5 flex flex-col space-y-2">
+            <button
+                class="bg-white/10 font-[txt] backdrop-blur-sm border border-white text-white px-6 py-3 rounded-full font-semibold transition-transform hover:scale-105"
+                data-aos="zoom-in"
+            >
+                BANK BCA
+            </button>
+            </div>
+
+            <div class="mt-10">
+            <p class="text-lg leading-relaxed font-[txt] px-2" data-aos="fade-up" data-aos-delay="200">
+                No Rekening :
+            </p>
+
+            <!-- Nomor rekening + tombol copy -->
+            <div class="flex flex-col items-center mt-2 space-y-1">
+                <p class="text-2xl font-[txt] pb-5">7151745192</p>
+                <button
+                    @click="copyAccount"
+                    data-aos="zoom-in"
+                    class="flex justify-center items-center space-x-3 bg-white/10 font-[txt] max-w-max backdrop-blur-sm border border-white text-white px-6 py-2 rounded-full text-base  transition-transform"
+                >
+                    <img src="images/copy.png" alt="Copy Icon" class="w-5 h-5" />
+                    <p>
+                    Salin Nomor Rekening
+                    </p>
+                </button>
+                <!-- Teks berhasil disalin -->
+                <p v-if="copied" class="text-base  font-[txt] text-green-400 mt-4">Berhasil disalin!</p>
+            </div>
+
+            <p class="text-lg leading-relaxed font-[txt] px-2 mt-5" data-aos="fade-up" data-aos-delay="200">
+                a.n Angga Agnia
+            </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section
+        class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex items-center justify-center text-center"
+    >
+        <!-- Background Video -->
+        <video
+            ref="bgVideo"
+            autoplay
+            muted
+            playsinline
+            class="absolute top-0 left-0 w-full h-full object-cover"
+        >
+            <source src="video/bagian-kesembilan.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="relative z-10 max-w-2xl">
+            <p
+            class="text-white mb-6 text-4xl font-[hdr] leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            >
+            Doa restu untuk kedua mempelai.
+            </p>
+            <p
+            class="text-base px-10 leading-relaxed font-[txt]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            >
+            Silakan untuk memberikan doa dan ucapan
+            </p>
+
+            <!-- Form Ucapan -->
+            <div class="mt-10 px-2">
+            <div class="text-center mt-5 flex flex-col space-y-2">
+                <input
+                v-model="name"
+                type="text"
+                placeholder="Nama kamu..."
+                class="bg-white/10 font-[txt] backdrop-blur-sm border border-white text-white px-6 py-3 rounded-full w-full max-w-md"
+                data-aos="zoom-in"
+                />
+                <textarea
+                v-model="message"
+                placeholder="Tulis doa dan ucapanmu di sini..."
+                class="bg-white/10 font-[txt] backdrop-blur-sm border border-white text-white px-6 py-3 rounded-2xl w-full max-w-md"
+                data-aos="zoom-in"
+                ></textarea>
+                <button
+                @click="submitUcapan"
+                class="bg-white/10 font-[txt] backdrop-blur-sm border border-white text-white px-6 py-3 rounded-full font-semibold transition-transform hover:scale-105"
+                data-aos="zoom-in"
+                >
+                Kirim Ucapan
+                </button>
+            </div>
+            </div>
+
+            <div class="mt-10 text-left max-h-64 overflow-y-auto px-4">
+                <div
+                v-for="ucapan in ucapanList"
+                :key="ucapan?.id"
+                class="bg-white/10 backdrop-blur-sm border border-white rounded-xl p-4 mb-3"
+                >
+                <p class="font-bold" v-if="ucapan?.name">{{ ucapan.name }}</p>
+                <p class="text-sm" v-if="ucapan?.message">{{ ucapan.message }}</p>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section class="relative min-h-screen px-6 text-white overflow-hidden transition-opacity duration-700 flex items-center justify-center text-center">
+        <video ref="bgVideo" autoplay muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="video/bagian-kesepuluh.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <div class="text-center py-4 bg-black/90">
+        <h1 class="text-white text-xl font-bold tracking-widest uppercase">
+        ANNSTORY <span class="text-white/50">| Part of anncode</span>
+        </h1>
+    </div>
+
+    <footer class="text-center py-6 px-4 bg-black/90 text-sm text-white/60">
+        <p>© 2025 <span class="font-semibold text-white font-[txt]">
+            <a href="https://www.instagram.com/ftrhymlyn/" target="_blank" rel="noopener noreferrer" class="hover:underline">ftrhymlyn</a>
+        </span>. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <script>
+    const { createApp, ref, onMounted } = Vue;
+
+    const audio = new Audio('./assets/music/music.mp3'); 
+    audio.loop = true;
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+            if (audio.paused) audio.play().catch(()=>{});
+        } else {
+            audio.pause();
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const images = [
+            './assets/images/gambar-1.jpg',
+            './assets/images/gambar-2.jpg',
+            './assets/images/gambar-3.jpg',
+            './assets/images/gambar-4.jpg',
+            './assets/images/gambar-5.jpg',
+            './assets/images/gambar-6.jpg',
+            './assets/images/gambar-7.jpg'
+        ];
+
+        const activeImage = document.getElementById('activeImage');
+
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 2.8,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        swiper.on('slideChange', () => {
+            const realIndex = swiper.realIndex;
+            activeImage.src = images[realIndex];
+        });
+
+        document.querySelectorAll('.swiper-slide img').forEach((img, index) => {
+            img.addEventListener('click', () => {
+                activeImage.src = images[index];
+                swiper.slideToLoop(index);
+            });
+        });
+    });
+
+    // Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyAzJKTrgJh6PZJ5Yyay7QLPDiC8YXMlirc",
+        authDomain: "inv-siti-angga-anncode.firebaseapp.com",
+        projectId: "inv-siti-angga-anncode",
+        storageBucket: "inv-siti-angga-anncode.firebasestorage.app",
+        messagingSenderId: "976339344808",
+        appId: "1:976339344808:web:c0515fd9691aabff13119d"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // ✅ Tambahkan ini supaya db tersedia
+    const db = firebase.firestore();
+
+    createApp({
+        setup() {
+            const namaTamu = ref('Tamu Undangan');
+
+            onMounted(() => {
+                const params = new URLSearchParams(window.location.search);
+                namaTamu.value = params.get('to') || 'Tamu Undangan';
+                document.getElementById('nama-tamu').textContent = namaTamu.value;
+
+                AOS.init({ once:true, duration:800 });
+
+                const btn = document.getElementById('btn-open');
+                if(btn) btn.addEventListener('click', openInvitation);
+            });
+
+            const openInvitation = () => {
+                audio.play().catch(()=>{}); // play musik saat buka undangan
+                const intro = document.getElementById('intro');
+                intro.style.opacity = 0;
+                setTimeout(() => {
+                    intro.style.display = 'none';
+                    document.getElementById('bagian-kedua').scrollIntoView({ behavior:'smooth' });
+                    AOS.refresh();
+                }, 700);
+            };
+
+            // Countdown
+            const days=ref(0), hours=ref(0), minutes=ref(0), seconds=ref(0);
+            const targetDate=new Date('2025-08-30T00:00:00');
+            let countdownInterval=null;
+            const updateCountdown = () => {
+                const now = new Date();
+                const diff = targetDate - now;
+                if(diff<=0){ clearInterval(countdownInterval); days.value=hours.value=minutes.value=seconds.value=0; return; }
+                days.value=Math.floor(diff/(1000*60*60*24));
+                hours.value=Math.floor((diff/(1000*60*60))%24);
+                minutes.value=Math.floor((diff/(1000*60))%60);
+                seconds.value=Math.floor((diff/1000)%60);
+            };
+            onMounted(()=>{
+                updateCountdown();
+                countdownInterval=setInterval(updateCountdown,1000);
+            });
+
+            // RSVP
+            const isAttending=ref(null), guestCount=ref(1), successMessage=ref('');
+            const setAttendance=(val)=>{ isAttending.value=val; if(!val) guestCount.value=0; AOS.refresh(); };
+            const increment=()=>guestCount.value++;
+            const decrement=()=>{ if(guestCount.value>1) guestCount.value--; };
+            const submitRSVP=async ()=>{
+                if(isAttending.value===null) return alert("Silakan pilih Hadir atau Tidak Hadir");
+                try{
+                    await db.collection('rsvp').add({ hadir:isAttending.value, jumlah_tamu:guestCount.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
+                    successMessage.value='Terimakasih! Kehadiran Anda telah tercatat.';
+                    isAttending.value=null; guestCount.value=1;
+                    AOS.refresh();
+                }catch(e){ console.error(e); alert("Gagal menyimpan data"); }
+            };
+
+            // Ucapan
+            const name=ref(''), message=ref(''), ucapanList=ref([]);
+            const submitUcapan=async ()=>{
+                if(!name.value||!message.value) return alert("Nama dan ucapan wajib diisi!");
+                try{
+                    await db.collection('ucapan').add({ name:name.value, message:message.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
+                    name.value=''; message.value='';
+                }catch(e){ console.error(e); }
+            };
+            onMounted(()=>{
+                db.collection('ucapan').orderBy('createdAt','desc').onSnapshot(snapshot=>{
+                    ucapanList.value = snapshot.docs.map(doc=>({id:doc.id,...doc.data()}));
+                    AOS.refresh();
+                });
+            });
+
+            // Copy rekening
+            const copied=ref(false), accountNumber='7151745192';
+            const copyAccount=()=>{ navigator.clipboard.writeText(accountNumber).then(()=>{ copied.value=true; setTimeout(()=>copied.value=false,2000); }).catch(()=>alert("Gagal menyalin nomor")); };
+
+            const openMap=()=>{ window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Kp. Ci Pangawaren RT 09/02, Pasir Panjang, Ciracap")}`,"_blank"); };
+            const addToCalendar=()=>{ window.open(`https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent('Undangan Pernikahan Siti & Angga')}&dates=20250828T090000Z/20250828T120000Z`,"_blank"); };
+
+            return { namaTamu, openInvitation, days,hours,minutes,seconds, isAttending, guestCount, successMessage, setAttendance, increment, decrement, submitRSVP, name,message,ucapanList,submitUcapan, copied, copyAccount, openMap, addToCalendar };
+        }
+    }).mount('body');
+
+    document.addEventListener('DOMContentLoaded', () => {
+            loadMedia();
+            fetchGuestData();
+        });
+    </script>
+
 </body>
 
 </html>
