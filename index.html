@@ -511,31 +511,37 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+
+    <!-- Vue & Firebase -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
     <script>
-        const { createApp, ref, onMounted } = Vue;
+    const { createApp, ref, onMounted } = Vue;
 
-        // Deklarasi audio global
-        const audio = new Audio('music/music.mp3'); 
-        audio.loop = true;
+    // Deklarasi audio global
+    const audio = new Audio('./assets/music/music.mp3'); 
+    audio.loop = true;
 
-        // Pause/Play saat tab aktif/tidak aktif
-        document.addEventListener("visibilitychange", () => {
+    // Pause/Play saat tab aktif/tidak aktif
+    document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
             if (audio.paused) audio.play().catch(()=>{});
         } else {
             audio.pause();
         }
-        });
+    });
 
-        document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
         const images = [
-            'images/gambar-1.jpg',
-            'images/gambar-2.jpg',
-            'images/gambar-3.jpg',
-            'images/gambar-4.jpg',
-            'images/gambar-5.jpg',
-            'images/gambar-6.jpg',
-            'images/gambar-7.jpg'
+            './assets/images/gambar-1.jpg',
+            './assets/images/gambar-2.jpg',
+            './assets/images/gambar-3.jpg',
+            './assets/images/gambar-4.jpg',
+            './assets/images/gambar-5.jpg',
+            './assets/images/gambar-6.jpg',
+            './assets/images/gambar-7.jpg'
         ];
 
         const activeImage = document.getElementById('activeImage');
@@ -545,12 +551,12 @@
             spaceBetween: 10,
             loop: true,
             autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
+                delay: 2500,
+                disableOnInteraction: false,
             },
             pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+                el: '.swiper-pagination',
+                clickable: true,
             },
         });
 
@@ -561,47 +567,50 @@
 
         document.querySelectorAll('.swiper-slide img').forEach((img, index) => {
             img.addEventListener('click', () => {
-            activeImage.src = images[index];
-            swiper.slideToLoop(index);
+                activeImage.src = images[index];
+                swiper.slideToLoop(index);
             });
         });
-        });
+    });
 
-        // Firebase
-        const firebaseConfig = {
+    // Firebase
+    const firebaseConfig = {
         apiKey: "AIzaSyAzJKTrgJh6PZJ5Yyay7QLPDiC8YXMlirc",
         authDomain: "inv-siti-angga-anncode.firebaseapp.com",
         projectId: "inv-siti-angga-anncode",
         storageBucket: "inv-siti-angga-anncode.firebasestorage.app",
         messagingSenderId: "976339344808",
         appId: "1:976339344808:web:c0515fd9691aabff13119d"
-        };
-        firebase.initializeApp(firebaseConfig);
+    };
+    firebase.initializeApp(firebaseConfig);
 
-        createApp({
+    // ✅ Tambahkan ini supaya db tersedia
+    const db = firebase.firestore();
+
+    createApp({
         setup() {
             const namaTamu = ref('Tamu Undangan');
 
             onMounted(() => {
-            const params = new URLSearchParams(window.location.search);
-            namaTamu.value = params.get('to') || 'Tamu Undangan';
-            document.getElementById('nama-tamu').textContent = namaTamu.value;
+                const params = new URLSearchParams(window.location.search);
+                namaTamu.value = params.get('to') || 'Tamu Undangan';
+                document.getElementById('nama-tamu').textContent = namaTamu.value;
 
-            AOS.init({ once:true, duration:800 });
+                AOS.init({ once:true, duration:800 });
 
-            const btn = document.getElementById('btn-open');
-            if(btn) btn.addEventListener('click', openInvitation);
+                const btn = document.getElementById('btn-open');
+                if(btn) btn.addEventListener('click', openInvitation);
             });
 
             const openInvitation = () => {
-            audio.play().catch(()=>{}); // play musik saat buka undangan
-            const intro = document.getElementById('intro');
-            intro.style.opacity = 0;
-            setTimeout(() => {
-                intro.style.display = 'none';
-                document.getElementById('bagian-kedua').scrollIntoView({ behavior:'smooth' });
-                AOS.refresh();
-            }, 700);
+                audio.play().catch(()=>{}); // play musik saat buka undangan
+                const intro = document.getElementById('intro');
+                intro.style.opacity = 0;
+                setTimeout(() => {
+                    intro.style.display = 'none';
+                    document.getElementById('bagian-kedua').scrollIntoView({ behavior:'smooth' });
+                    AOS.refresh();
+                }, 700);
             };
 
             // Countdown
@@ -609,17 +618,17 @@
             const targetDate=new Date('2025-08-30T00:00:00');
             let countdownInterval=null;
             const updateCountdown = () => {
-            const now = new Date();
-            const diff = targetDate - now;
-            if(diff<=0){ clearInterval(countdownInterval); days.value=hours.value=minutes.value=seconds.value=0; return; }
-            days.value=Math.floor(diff/(1000*60*60*24));
-            hours.value=Math.floor((diff/(1000*60*60))%24);
-            minutes.value=Math.floor((diff/(1000*60))%60);
-            seconds.value=Math.floor((diff/1000)%60);
+                const now = new Date();
+                const diff = targetDate - now;
+                if(diff<=0){ clearInterval(countdownInterval); days.value=hours.value=minutes.value=seconds.value=0; return; }
+                days.value=Math.floor(diff/(1000*60*60*24));
+                hours.value=Math.floor((diff/(1000*60*60))%24);
+                minutes.value=Math.floor((diff/(1000*60))%60);
+                seconds.value=Math.floor((diff/1000)%60);
             };
             onMounted(()=>{
-            updateCountdown();
-            countdownInterval=setInterval(updateCountdown,1000);
+                updateCountdown();
+                countdownInterval=setInterval(updateCountdown,1000);
             });
 
             // RSVP
@@ -628,29 +637,29 @@
             const increment=()=>guestCount.value++;
             const decrement=()=>{ if(guestCount.value>1) guestCount.value--; };
             const submitRSVP=async ()=>{
-            if(isAttending.value===null) return alert("Silakan pilih Hadir atau Tidak Hadir");
-            try{
-                await db.collection('rsvp').add({ hadir:isAttending.value, jumlah_tamu:guestCount.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
-                successMessage.value='Terimakasih! Kehadiran Anda telah tercatat.';
-                isAttending.value=null; guestCount.value=1;
-                AOS.refresh();
-            }catch(e){ console.error(e); alert("Gagal menyimpan data"); }
+                if(isAttending.value===null) return alert("Silakan pilih Hadir atau Tidak Hadir");
+                try{
+                    await db.collection('rsvp').add({ hadir:isAttending.value, jumlah_tamu:guestCount.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
+                    successMessage.value='Terimakasih! Kehadiran Anda telah tercatat.';
+                    isAttending.value=null; guestCount.value=1;
+                    AOS.refresh();
+                }catch(e){ console.error(e); alert("Gagal menyimpan data"); }
             };
 
             // Ucapan
             const name=ref(''), message=ref(''), ucapanList=ref([]);
             const submitUcapan=async ()=>{
-            if(!name.value||!message.value) return alert("Nama dan ucapan wajib diisi!");
-            try{
-                await db.collection('ucapan').add({ name:name.value, message:message.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
-                name.value=''; message.value='';
-            }catch(e){ console.error(e); }
+                if(!name.value||!message.value) return alert("Nama dan ucapan wajib diisi!");
+                try{
+                    await db.collection('ucapan').add({ name:name.value, message:message.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
+                    name.value=''; message.value='';
+                }catch(e){ console.error(e); }
             };
             onMounted(()=>{
-            db.collection('ucapan').orderBy('createdAt','desc').onSnapshot(snapshot=>{
-                ucapanList.value = snapshot.docs.map(doc=>({id:doc.id,...doc.data()}));
-                AOS.refresh();
-            });
+                db.collection('ucapan').orderBy('createdAt','desc').onSnapshot(snapshot=>{
+                    ucapanList.value = snapshot.docs.map(doc=>({id:doc.id,...doc.data()}));
+                    AOS.refresh();
+                });
             });
 
             // Copy rekening
@@ -662,8 +671,8 @@
 
             return { namaTamu, openInvitation, days,hours,minutes,seconds, isAttending, guestCount, successMessage, setAttendance, increment, decrement, submitRSVP, name,message,ucapanList,submitUcapan, copied, copyAccount, openMap, addToCalendar };
         }
-        }).mount('body');
-    </script>
+    }).mount('body');
+</script>
 
 </body>
 </html>
